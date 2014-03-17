@@ -6,6 +6,8 @@ import box2d
 
 sources
 {
+	box2d_debug_renderer.cpp
+	box2d_debug_renderer.h
 	debug_renderer.cpp
 	debug_renderer.h
 }
