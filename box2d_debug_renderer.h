@@ -26,6 +26,7 @@
 #include "debug_renderer.h"
 #include <yip-imports/Box2D/Box2D/Box2D.h>
 #include <vector>
+#include <memory>
 
 class Box2DDebugRenderer : public b2Draw, public DebugRenderer
 {
@@ -48,6 +49,7 @@ public:
 	void DrawTransform(const b2Transform & xf) override;
 
 	void render(b2World * world);
+	inline void render(const std::shared_ptr<b2World> & world) { render(world.get()); }
 
 private:
 	float m_PixelsPerMeter;
