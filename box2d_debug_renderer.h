@@ -48,7 +48,10 @@ public:
 	void DrawSegment(const b2Vec2 & p1, const b2Vec2 & p2, const b2Color & color) override;
 	void DrawTransform(const b2Transform & xf) override;
 
+	inline void setupForRendering() { DebugRenderer::setupForRendering(m_ProjectionMatrix); }
+
 	void render(b2World * world);
+	inline void render(const std::unique_ptr<b2World> & world) { render(world.get()); }
 	inline void render(const std::shared_ptr<b2World> & world) { render(world.get()); }
 
 private:

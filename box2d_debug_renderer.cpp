@@ -94,7 +94,7 @@ void Box2DDebugRenderer::DrawTransform(const b2Transform & xf)
 
 void Box2DDebugRenderer::render(b2World * world)
 {
-	setupForRendering(m_ProjectionMatrix);
+	DebugRenderer::setupForRendering(m_ProjectionMatrix);
 	world->SetDebugDraw(this);
 	world->DrawDebugData();
 	world->SetDebugDraw(NULL);
