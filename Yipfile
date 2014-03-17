@@ -1,0 +1,11 @@
+
+import cxx-util
+import gl_wrappers
+import math
+import box2d
+
+sources
+{
+	debug_renderer.cpp
+	debug_renderer.h
+}
