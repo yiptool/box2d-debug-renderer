@@ -4,10 +4,14 @@ import gl_wrappers
 import math
 import box2d
 
+public_headers
+{
+	box2d_debug_renderer.h
+	debug_renderer.h
+}
+
 sources
 {
 	box2d_debug_renderer.cpp
-	box2d_debug_renderer.h
 	debug_renderer.cpp
-	debug_renderer.h
 }
