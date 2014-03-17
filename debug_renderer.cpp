@@ -75,12 +75,12 @@ void DebugRenderer::setupForRendering(const mat4 & projectionMatrix)
 		{
 			GL::ShaderPtr shader;
 
-            std::clog << "Compiling vertex shader for the debug renderer.";
+			std::clog << "Compiling vertex shader for the debug renderer." << std::endl;
 			shader = m_ResourceManager->createShader(GL::VERTEX_SHADER);
 			shader->initFromSource(g_VertexShaderCode);
 			m_Program->attachShader(shader);
 
-            std::clog << "Compiling fragment shader for the debug renderer.";
+			std::clog << "Compiling fragment shader for the debug renderer." << std::endl;
 			shader = m_ResourceManager->createShader(GL::FRAGMENT_SHADER);
 			shader->initFromSource(g_FragmentShaderCode);
 			m_Program->attachShader(shader);
