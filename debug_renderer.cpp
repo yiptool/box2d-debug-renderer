@@ -55,7 +55,7 @@ DebugRenderer::~DebugRenderer()
 {
 }
 
-void DebugRenderer::setupForRendering(const mat4 & projectionMatrix)
+void DebugRenderer::setupForRendering(const glm::mat4 & projectionMatrix)
 {
 	GL::disable(GL::SCISSOR_TEST);
 	GL::disable(GL::DEPTH_TEST);
@@ -103,7 +103,7 @@ void DebugRenderer::setupForRendering(const mat4 & projectionMatrix)
 
 	m_Program->use();
 
-	GL::uniformMatrix4fv(m_UniformProjection, 1, GL::FALSE, &projectionMatrix[0]);
+	GL::uniformMatrix4fv(m_UniformProjection, 1, GL::FALSE, &projectionMatrix[0][0]);
 	GL::enableVertexAttribArray(m_AttribPosition);
 }
 

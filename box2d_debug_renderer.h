@@ -24,7 +24,7 @@
 #define __0d981fab697a592b8e8b00c1b6fc54dc__
 
 #include "debug_renderer.h"
-#include <yip-imports/Box2D/Box2D/Box2D.h>
+#include <yip-imports/box2d.h>
 #include <vector>
 #include <memory>
 
@@ -35,8 +35,8 @@ public:
 		b2Draw::e_shapeBit | b2Draw::e_jointBit | b2Draw::e_pairBit | b2Draw::e_centerOfMassBit);
 	~Box2DDebugRenderer();
 
-	inline const mat4 & projectionMatrix() const { return m_ProjectionMatrix; }
-	inline void setProjectionMatrix(const mat4 & m) { m_ProjectionMatrix = m; }
+	inline const glm::mat4 & projectionMatrix() const { return m_ProjectionMatrix; }
+	inline void setProjectionMatrix(const glm::mat4 & m) { m_ProjectionMatrix = m; }
 
 	inline float pixelsPerMeter() const { return m_PixelsPerMeter; }
 	inline void setPixelsPerMeter(float v) { m_PixelsPerMeter = v; }
@@ -56,7 +56,7 @@ public:
 
 private:
 	float m_PixelsPerMeter;
-	mat4 m_ProjectionMatrix;
+	glm::mat4 m_ProjectionMatrix;
 
 	Box2DDebugRenderer(const Box2DDebugRenderer &) = delete;
 	Box2DDebugRenderer & operator=(const Box2DDebugRenderer &) = delete;

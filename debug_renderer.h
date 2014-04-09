@@ -26,7 +26,7 @@
 #include <yip-imports/gl.h>
 #include <yip-imports/gl_resource_manager.h>
 #include <yip-imports/cxx-util/macros.h>
-#include <yip-imports/math/mat4.h>
+#include <yip-imports/glm/mat4x4.hpp>
 #include <yip-imports/Box2D/Box2D/Common/b2Draw.h>
 #include <vector>
 
@@ -43,7 +43,7 @@ public:
 	DebugRenderer(const GL::ResourceManagerPtr & resManager);
 	~DebugRenderer();
 
-	void setupForRendering(const mat4 & projectionMatrix);
+	void setupForRendering(const glm::mat4 & projectionMatrix);
 	void cleanupAfterRendering();
 
 	void render(size_t mode, size_t numVertices, const b2Color & color, float ptSize = 1.0f) const;

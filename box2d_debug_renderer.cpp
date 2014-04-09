@@ -42,8 +42,7 @@
 
 Box2DDebugRenderer::Box2DDebugRenderer(const GL::ResourceManagerPtr & resManager, unsigned flags)
 	: DebugRenderer(resManager),
-	  m_PixelsPerMeter(50.0f),
-	  m_ProjectionMatrix(mat4::identity())
+	  m_PixelsPerMeter(50.0f)
 {
 	SetFlags(flags);
 }

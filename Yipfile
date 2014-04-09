@@ -22,7 +22,7 @@ THE SOFTWARE."
 
 import cxx-util
 import gles2_wrappers
-import math
+import glm
 import box2d
 
 public_headers
