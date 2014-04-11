@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE."
 
 import cxx-util
-import gles2_wrappers
+import gles2-util
 import glm
 import box2d
 
