@@ -96,6 +96,6 @@ void Box2DDebugRenderer::render(b2World * world)
 	DebugRenderer::setupForRendering(m_ProjectionMatrix);
 	world->SetDebugDraw(this);
 	world->DrawDebugData();
-	world->SetDebugDraw(NULL);
+	world->SetDebugDraw(nullptr);
 	cleanupAfterRendering();
 }
