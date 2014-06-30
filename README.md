@@ -12,7 +12,7 @@ Compiling this library
 This library is not intended to be built directly. Instead it is supposed
 to be included into projects using the [Yip](https://github.com/yiptool/yip.git).
 
-Use the `import box2d-debug-renderer` directive in your `Yipfile` to use this
+Use the `import gles2-box2d-debug-renderer` directive in your `Yipfile` to use this
 library.
 
 
